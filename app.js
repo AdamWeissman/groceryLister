@@ -22,6 +22,7 @@ function sortList(){
   console.log(tempArray.sort())
   //refactor so my list will recreate all the list items but alphabetized
   // stretch/future goal would be to allow user to drag and drop items on the list for better prioritization
+  mainList.innerText = tempArray // this isn't perfect, but something to work on...
 }
 
 
