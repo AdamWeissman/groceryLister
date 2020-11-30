@@ -1,6 +1,7 @@
 const inputSelect = document.querySelector("input[name='newItem']")
 const mainList = document.querySelector("ul");
 const allListItems = document.querySelectorAll('li');
+const sorterButton = document.getElementById('sorterButton')
 
 for (let x = 0; x < allListItems.length; x++) {
   allListItems[x].addEventListener("click", myList);
@@ -9,6 +10,14 @@ for (let x = 0; x < allListItems.length; x++) {
 // for (let x = 0; x < allListItems; x++) {
 //   console.log(allListItems[x].innerText)
 // }
+
+sorterButton.addEventListener('click', sortList)
+
+function sortList(){
+  allListItems.forEach((x) => {
+    console.log(x.innerText)
+  })
+}
 
 
 
