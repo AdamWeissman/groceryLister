@@ -1,17 +1,23 @@
 const inputSelect = document.querySelector("input[name='newItem']")
-const mainList = document.querySelector('ul');
-const allListItems = document.querySelectorAll("li")
+const mainList = document.querySelector("ul");
+const allListItems = document.querySelectorAll('li');
 
-for (let x = 0; x < allListItems; x++) {
+for (let x = 0; x < allListItems.length; x++) {
   allListItems[x].addEventListener("click", myList);
 }
+
+// for (let x = 0; x < allListItems; x++) {
+//   console.log(allListItems[x].innerText)
+// }
+
+
 
 function myList(){
   var temp = this.classList.toggle('red');
   if (temp) {
     let span = document.createElement('span');
-    span.textContent = 'x';
-    span.addEventListener('click', function() {
+    span.textContent = ' X ';
+    span.addEventListener("click", function() {
       this.parentElement.remove()
     })
     this.appendChild(span);
@@ -26,7 +32,6 @@ inputSelect.addEventListener('keypress', function(event){
     console.log(event.keyCode);
     makeNew();
   } 
-
 })
 
 function makeNew(){
