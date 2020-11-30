@@ -14,9 +14,14 @@ for (let x = 0; x < allListItems.length; x++) {
 sorterButton.addEventListener('click', sortList)
 
 function sortList(){
-  allListItems.forEach((x) => {
-    console.log(x.innerText)
+  let tempArray = [],
+  updatedAllListItems = document.querySelectorAll('li');
+  updatedAllListItems.forEach((x) => {
+    tempArray.push(x.innerText)
   })
+  console.log(tempArray.sort())
+  //refactor so my list will recreate all the list items but alphabetized
+  // stretch/future goal would be to allow user to drag and drop items on the list for better prioritization
 }
 
 
